@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-
 chrome = webdriver.Chrome()
 chrome.get('http://www.bigbasket.com/product/all-categories')
 btn = chrome.find_element_by_id('uiv2-ftv-button')
