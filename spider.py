@@ -35,7 +35,7 @@ def fileclose(file,wb):
     wb.save('products.xls')
     file.close()
 
-def check(a):
+def check(a,wb):
     if a==0:
         wb = copy(wd)
     else:
@@ -61,7 +61,10 @@ def load(chrome):
     except:
         wb = xlwt.Workbook()
         a=1
-    check(a)
+    if a==1:
+        check(a,wb)
+    else:
+        check(a,wd)
     
     try:
         page_source = chrome.page_source
